@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAMMY BEAUTY COMPANY</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #32CD32; /* Luminous Green */
+            text-align: center;
+        }
+        header {
+            background: #d63384;
+            color: white;
+            padding: 20px;
+            font-size: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav {
+            display: flex;
+            gap: 20px;
+            margin-right: 20px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .welcome {
+            background: #ffebf0;
+            padding: 50px;
+            margin: 20px auto;
+            width: 90%;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .welcome p {
+            font-style: italic;
+            font-size: 18px;
+            color: #d63384;
+        }
+        .services {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+        .service {
+            background: white;
+            margin: 15px;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 250px;
+        }
+        .service img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .service p {
+            font-size: 14px;
+            color: #555;
+        }
+        form {
+            background: white;
+            padding: 20px;
+            width: 90%;
+            max-width: 400px;
+            margin: auto;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        input, select, button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background: #d63384;
+            color: white;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #b82e72;
+        }
+        footer {
+            background: #fff;
+            padding: 20px;
+            font-style: italic;
+            color: blue;
+            font-size: 18px;
+        }
+        .info-section {
+            background: white;
+            padding: 20px;
+            width: 90%;
+            max-width: 400px;
+            margin: 20px auto;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        @keyframes blink {
+            0% { opacity: 1; }
+            50% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+        .blinking-image:hover {
+            animation: blink 0.5s infinite;
+        }
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+            nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .services {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>SAMMY BEAUTY COMPANY</div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#services">Services</a>
+            <a href="#about">About Us</a>
+            <a href="#contact">Contact Us</a>
+        </nav>
+    </header>
+    
+    <section id="home" class="welcome">
+        <h1>Welcome to Sammy Beauty Company!</h1>
+        <p>Indulge in a world of beauty and relaxation with our top-tier services. Whether you're looking for a luxurious manicure, a soothing body massage, or a complete salon transformation, we are here to make you feel pampered and beautiful.</p>
+    </section>
+    
+    <section id="services" class="services">
+        <div class="service">
+            <img src="Manicure.jpg" class="blinking-image">
+            <h3>Manicure</h3>
+            <p>Enjoy a relaxing manicure that includes nail shaping, cuticle care, and polish application for a flawless look.</p>
+        </div>
+        <div class="service">
+            <img src="Pedicure.jpg" class="blinking-image">
+            <h3>Pedicure</h3>
+            <p>Pamper your feet with our professional pedicure, designed to rejuvenate your skin and nails with expert care.</p>
+        </div>
+        <div class="service">
+            <img src="Body massage.jpg" class="blinking-image">
+            <h3>Body Massage</h3>
+            <p>Relax and unwind with our therapeutic body massage, relieving stress and enhancing overall well-being.</p>
+        </div>
+        <div class="service">
+            <img src="Salon services.jpg" class="blinking-image">
+            <h3>Salon Services</h3>
+            <p>From haircuts to styling, coloring, braiding, plating, waxing and treatments, our salon experts will bring out your best look.</p>
+        </div>
+    </section>
+    <section>
+        <form>
+            <h2>Book a Service</h2>
+            <input type="text" placeholder="First Name" required>
+            <input type="text" placeholder="Last Name" required>
+            <input type="email" placeholder="Email Address" required>
+            <input type="tel" placeholder="Phone Number" required>
+            <select id="service" required>
+                <option value="">Select a Service</option>
+                <option value="manicure">Manicure</option>
+                <option value="pedicure">Pedicure</option>
+                <option value="body_massage">Body Massage</option>
+                <option value="salon_services">Salon Services</option>
+            </select>
+            <select id="salon-options" style="display:none;">
+                <option value="weaving">Weaving</option>
+                <option value="braiding">Braiding</option>
+                <option value="shaving">Shaving</option>
+                <option value="plaiting">Plaiting</option>
+                <option value="blow_drying">Blow Drying</option>
+            </select>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+    
+    
+    <section id="about" class="info-section">
+        <h2>About Us</h2>
+        <p>We are located at the outskirts of Ngong Hills after the junction opposite Naivas supermarket.</p>
+    </section>
+    
+    <section id="contact" class="info-section">
+        <h2>Contact Us</h2>
+        <p>Call us through +254710495490</p>
+    </section>
+    
+    <footer>
+        GET VALUE FOR YOUR MONEY IN SAMMY!
+    </footer>
+</body>
+</html>
+
+
